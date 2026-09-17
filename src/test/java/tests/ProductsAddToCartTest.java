@@ -45,7 +45,7 @@ public class ProductsAddToCartTest extends BaseTest {
         productsPage.addToCart(allProductCards.get(0));
         productsPage.addToCart(allProductCards.get(1));
         productsPage.addToCart(allProductCards.get(2));
-        assertEquals(8, productsPage.getCartBadgeCount());
+        assertEquals(3, productsPage.getCartBadgeCount());
 
     }
 
