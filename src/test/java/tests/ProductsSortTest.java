@@ -63,7 +63,7 @@ public class ProductsSortTest extends BaseTest {
             "Name (A to Z), Sauce Labs Backpack",
             "Name (Z to A), Test.allTheThings() T-Shirt (Red)",
             "Price (high to low), Sauce Labs Fleece Jacket",
-            "Price (low to high), Sauce Labs Onesie"
+            "Price (low to high), Sauce Labs Onesie)"
     })
     public void sortingProductsPlacesExpectedProductFirst(String sortOption, String expectedProductName) {
         productsPage.selectSortOption(sortOption);
