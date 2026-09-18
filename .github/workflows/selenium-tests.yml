@@ -29,3 +29,12 @@ jobs:
                   STANDARD_USERNAME: ${{ secrets.STANDARD_USERNAME}}
                   STANDARD_PASSWORD: ${{ secrets.STANDARD_PASSWORD}}
               run: mvn test
+
+            - name: Upload test reports summary
+              if: always()
+              uses: dorny/test-reporter@v1
+              with:
+                  name: Selenium Test Results
+                  path: "target/surefire-reports/*.xml"
+                  reporter: java-junit
+                  fail-on-error: false
